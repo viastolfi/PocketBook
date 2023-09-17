@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PocketBookVincentAstolfi.AllBooksPage"
+             xmlns:custom_components="clr-namespace:PocketBookVincentAstolfi"
+             Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="Auto, *">
+        <Grid Grid.Row="0" Margin="0,15,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <ImageButton Clicked="GoBackClick" Grid.Column="0" Source="chevron_right" Rotation="180" HorizontalOptions="Start" VerticalOptions="Center"/>
+                <Label Grid.Column="1" Text="Mes livres" VerticalOptions="Center" Margin="15,0,0,0  "/>
+                <Label Grid.Column="2" Text="Tous" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Image Grid.Column="3" Source="plus" VerticalOptions="Center" HorizontalOptions="End" Margin="0,0,15,0"/>
+                <Image Grid.Column="4" Source="arrow_up_arrow_down" VerticalOptions="Center" HorizontalOptions="End"/>
+            </Grid>
+
+        <ScrollView Grid.Row="1"
+                    VerticalOptions="FillAndExpand"
+                    Orientation="Vertical">
+            <CollectionView x:Name="MyCollectionView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding Name}" />
+
+                            <custom_components:BookPreviewCV Books="{Binding WritedBooks}"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom_components="clr-namespace:PocketBookVincentAstolfi"
+             x:Class="PocketBookVincentAstolfi.MainPage"
+             Shell.BackgroundColor="White">
+    
+    <ScrollView>
+        <VerticalStackLayout>
+    
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="Modifier" TextColor="Red" FontSize="20"/>
+                <Image Grid.Column="1" Source="plus" HorizontalOptions="End"/>
+            </Grid>
+            
+            <Label Text="Mes Livres"
+                   FontAttributes="Bold"
+                   FontSize="30"
+                   Margin="15,0,0,15"/>
+
+            <BoxView WidthRequest="500" HeightRequest="0.5"/>
+
+            <custom_components:AltTab SectionTitle="Tous"
+                                      SectionIcon="bookmark_fill"
+                                      OccurrencieNumber="45"/>
+
+            <custom_components:AltTab SectionTitle="En prêt"
+                                      SectionIcon="person_badge_clock_fill"
+                                      OccurrencieNumber="1"/>
+
+            <custom_components:AltTab SectionTitle="À lire plus tard"
+                                      SectionIcon="arrow_forward"/>
+
+            <custom_components:AltTab SectionTitle="Statut de lecture"
+                                      SectionIcon="eyeglasses"/>
+
+            <custom_components:AltTab SectionTitle="Favoris"
+                                      SectionIcon="heart_fill"/>
+
+            <custom_components:AltTab SectionTitle="Etiquettes"
+                                      SectionIcon="tag_fill" Margin="0,0,0,-0.5"/>
+
+            <BoxView WidthRequest="500" HeightRequest="0.5"/>
+
+            <Label Text="Filtres"
+                   FontAttributes="Bold"
+                   FontSize="25"
+                   Margin="15,10,0,10"/>
+
+            <BoxView WidthRequest="500" HeightRequest="0.5"/>
+
+            <custom_components:AltTab SectionTitle="Auteur"
+                                      SectionIcon="person_fill"/>
+
+            <custom_components:AltTab SectionTitle="Date de publication"
+                                      SectionIcon="calendar"/>
+
+            <custom_components:AltTab SectionTitle="Note"
+                                      SectionIcon="sparkles" Margin="0,0,0,-0.5"/>
+
+            <BoxView WidthRequest="500" HeightRequest="0.5"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

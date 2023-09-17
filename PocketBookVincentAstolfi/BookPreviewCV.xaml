@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="BookPreviewWindow"
+             x:Class="PocketBookVincentAstolfi.BookPreviewCV">
+
+    <HorizontalStackLayout BindingContext="{x:Reference BookPreviewWindow}">
+        <CollectionView ItemsSource="{Binding Books}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <HorizontalStackLayout>
+                        <HorizontalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped"/>
+                        </HorizontalStackLayout.GestureRecognizers>
+                        <Image Source="{Binding Cover}" Margin="10"/>
+
+                        <Grid Margin="10,10,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" FontAttributes="Bold" Text="{Binding Name}"/>
+                            <Label Grid.Row="1" Text="{Binding Author.Name}"/>
+                            <Label Grid.Row="2" Text="Non lu"/>
+                            <Label Grid.Row="5" Text="Etoiles"/>
+                        </Grid> 
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </HorizontalStackLayout>
+</ContentView>

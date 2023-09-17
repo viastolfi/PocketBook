@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="PocketBookVincentAstolfi.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:PocketBookVincentAstolfi">
+
+    <TabBar>
+        <Tab Title="My Library"
+             Icon="books_vertical_fill.svg">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}">
+            </ShellContent>
+        </Tab>
+        <Tab Title="My Lists"
+             Icon="list_bullet.svg">
+            <ShellContent Title="My lists"
+                          ContentTemplate="{DataTemplate local:MyListsPage}">
+            </ShellContent>
+        </Tab>
+        <Tab Title="My Readings"
+             Icon="bookmark_fill.svg">
+            <ShellContent Title="My Reading"
+                          ContentTemplate="{DataTemplate local:MyReadingsPage}">
+            </ShellContent>
+        </Tab>
+        <Tab Title="Search"
+             Icon="magnifyingglass.svg">
+            <ShellContent Title="Search"
+                          ContentTemplate="{DataTemplate local:SearchPage}">
+            </ShellContent>
+        </Tab>
+    </TabBar>
+
+</Shell>

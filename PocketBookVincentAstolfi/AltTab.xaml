@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             x:Name="altTabWindow"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PocketBookVincentAstolfi.AltTab">
+
+    <StackLayout BackgroundColor="{StaticResource Gray100}">
+        <Grid Padding="10" BindingContext="{x:Reference altTabWindow}">
+            <Grid.GestureRecognizers> 
+                <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped"/>
+            </Grid.GestureRecognizers>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Source="{Binding SectionIcon}" HorizontalOptions="Start" VerticalOptions="Center"/>
+                <Label Grid.Column="1" Text="{Binding SectionTitle}" HorizontalOptions="Start" Margin="20,0,0,0" VerticalOptions="Center"/>
+                <Label Grid.Column="2" Text="{Binding OccurrencieNumber}" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,10,0"/>
+                <Image Grid.Column="3" Source="chevron_right" HorizontalOptions="End" VerticalOptions="Center"/>
+        </Grid>
+        <BoxView Color="Black" WidthRequest="400" HeightRequest="0.5"/>
+    </StackLayout>
+</ContentView>
