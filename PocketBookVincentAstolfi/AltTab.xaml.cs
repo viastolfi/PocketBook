@@ -20,13 +20,19 @@ public partial class AltTab : ContentView
 		get => (string)GetValue(SectionTitleProperty); 
 		set => SetValue(SectionTitleProperty, value);
 	}
-	public AltTab()
+    public Type TargetPageType { get; set; }
+
+    public AltTab()
 	{
 		InitializeComponent();
 	}
 
 	async void OnTapGestureRecognizerTapped(object sender, EventArgs e)
 	{
-		await Navigation.PushAsync(new AllBooksPage());
-	}
+        if (TargetPageType != null)
+        {
+            var page = (Page)Activator.CreateInstance(TargetPageType);
+            await Navigation.PushAsync(page);
+        }
+    }
 }

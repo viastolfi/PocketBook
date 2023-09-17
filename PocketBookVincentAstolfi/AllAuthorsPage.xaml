@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PocketBookVincentAstolfi.AllAuthorsPage"
+             Title="AllAuthorsPage"
+             Shell.NavBarIsVisible="False">
+    <VerticalStackLayout>
+        <Grid Grid.Row="0" Margin="0,15,15,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <ImageButton Clicked="GoBackClick" Grid.Column="0" Source="chevron_right" Rotation="180" HorizontalOptions="Start" VerticalOptions="Center"/>
+            <Label Grid.Column="1" Text="Mes livres" VerticalOptions="Center" Margin="15,0,0,0  "/>
+            <Label Grid.Column="2" Text="Auteur" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Image Grid.Column="4" Source="arrow_up_arrow_down" VerticalOptions="Center" HorizontalOptions="End"/>
+        </Grid>
+
+        <BoxView WidthRequest="500" HeightRequest="0.5"/>
+
+
+        <ScrollView>
+            <CollectionView x:Name="MyCollectionView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Margin="15,0,15,0">
+                            <Grid ColumnDefinitions="Auto, Auto, *, Auto" Margin="0,10,0,10">
+                                <Image Grid.Column="0" Source="book"/>
+                                <Label Grid.Column="1" Text="{Binding Name}" Margin="8,0,0,0" VerticalOptions="Center"/>
+                                <Label Grid.Column="2" Text="2" HorizontalOptions="End" VerticalOptions="Center"/>
+                                <Image Grid.Column="3" Source="chevron_right"/>
+                            </Grid>
+                            <BoxView WidthRequest="500" HeightRequest="0.5"/>
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+    </VerticalStackLayout>
+</ContentPage>
