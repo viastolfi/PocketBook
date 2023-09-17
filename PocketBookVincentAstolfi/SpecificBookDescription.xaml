@@ -2,12 +2,76 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PocketBookVincentAstolfi.SpecificBookDescription"
-             Title="SpecificBookDescription">
-    <ScrollView>
-        <VerticalStackLayout>
-            <HorizontalStackLayout>
-                <Image Source="{Binding Cover}"/>
-            </HorizontalStackLayout>
-        </VerticalStackLayout>
-    </ScrollView>
+             Title="SpecificBookDescription"
+             Shell.NavBarIsVisible="False">
+
+    <VerticalStackLayout>
+        <Grid ColumnDefinitions="Auto, Auto, *" Margin="0,15,0,0">
+            <ImageButton Clicked="GoBackClick" Grid.Column="0" Source="chevron_right" Rotation="180" HorizontalOptions="Start" VerticalOptions="Center"/>
+            <Label Grid.Column="1" Text="Tous" VerticalOptions="Center" Margin="15,0,0,0  "/>
+            <Label Grid.Column="2" Text="Detail du livre" VerticalOptions="Center" Margin="15,0,0,0  "/>
+        </Grid> 
+        <ScrollView>
+            <VerticalStackLayout Margin="15,0,15,0">
+                <HorizontalStackLayout>
+                    <Image Source="{Binding Cover}"/>
+
+                    <Grid RowDefinitions="Auto, *" Margin="8,0,0,0">
+                        <Label Grid.Row="0" Text="{Binding Name}" FontAttributes="Bold"/>
+                        <Label Grid.Row="1" Text="Etoiles" VerticalOptions="End"/>
+                    </Grid>
+                </HorizontalStackLayout>
+                <BoxView WidthRequest="500" HeightRequest="0.5" Margin="0,10,0,10"/>
+
+                <Grid RowDefinitions="Auto, *">
+                    <Label Grid.Row="0" Text="Auteur" FontSize="12" FontAttributes="Bold"/>
+                    <Label Grid.Row="1" Text="{Binding Author.Name}" VerticalOptions="End"/>
+                </Grid>
+
+                <BoxView WidthRequest="500" HeightRequest="0.5" Margin="0,10,0,10"/>
+
+                <Grid RowDefinitions="Auto, *">
+                    <Label Grid.Row="0" Text="Maison d'édition" FontSize="12" FontAttributes="Bold"/>
+                    <Label Grid.Row="1" Text="{Binding MaisonEdition}" VerticalOptions="End"/>
+                </Grid>
+
+                <BoxView WidthRequest="500" HeightRequest="0.5" Margin="0,10,0,10"/>
+
+                <Grid RowDefinitions="Auto, *">
+                    <Label Grid.Row="0" Text="Résumé" FontSize="12" FontAttributes="Bold"/>
+                    <Label Grid.Row="1" Text="{Binding Description}" VerticalOptions="End"/>
+                </Grid>
+
+                <BoxView WidthRequest="500" HeightRequest="0.5" Margin="0,10,0,10"/>
+
+                <Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, *">
+                    <Label Grid.Row="0" Text="Detail" FontSize="12" FontAttributes="Bold"/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="Nombres de pages"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding NbPages}" HorizontalOptions="End"/>
+
+                    <Label Grid.Row="2" Grid.Column="0" Text="Langues"/>
+                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding Langue}" HorizontalOptions="End"/>
+
+                    <Label Grid.Row="3" Grid.Column="0" Text="ISBN"/>
+                    <Label Grid.Row="3" Grid.Column="1" Text="{Binding ISBN}" HorizontalOptions="End"/>
+                </Grid>
+
+                <BoxView WidthRequest="500" HeightRequest="0.5" Margin="0,10,0,10"/>
+
+                <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="Auto, *">
+                    <Label Grid.Row="0" Text="Statut de lecture" FontSize="12" FontAttributes="Bold"/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="Statut"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="Non lu" HorizontalOptions="End"/>
+                </Grid>
+
+                <BoxView WidthRequest="500" HeightRequest="0.5" Margin="0,10,0,10"/>
+
+                <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="Auto, *">
+                    <Label Grid.Row="0" Text="Bibliothèque" FontSize="12" FontAttributes="Bold"/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="ajouté le"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="10 aout 2023" HorizontalOptions="End"/>
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+    </VerticalStackLayout>
 </ContentPage>

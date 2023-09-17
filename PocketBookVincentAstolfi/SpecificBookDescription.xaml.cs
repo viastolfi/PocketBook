@@ -9,4 +9,9 @@ public partial class SpecificBookDescription : ContentPage
         InitializeComponent();
         BindingContext = selectedBook; 
     }
+
+    async private void GoBackClick(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
 }
