@@ -3,8 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PocketBookVincentAstolfi.AllBooksPage"
              xmlns:custom_components="clr-namespace:PocketBookVincentAstolfi"
-             Shell.NavBarIsVisible="False">
-
+             Shell.NavBarIsVisible="False"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+    
     <Grid RowDefinitions="Auto, *">
         <Grid Grid.Row="0" Margin="0,15,0,0">
                 <Grid.ColumnDefinitions>
@@ -14,11 +15,23 @@
                     <ColumnDefinition/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <ImageButton Clicked="GoBackClick" Grid.Column="0" Source="chevron_right" Rotation="180" HorizontalOptions="Start" VerticalOptions="Center"/>
+                <ImageButton Clicked="GoBackClick" Grid.Column="0" Source="chevron_right" Rotation="180" HorizontalOptions="Start" VerticalOptions="Center">
+                <ImageButton.Behaviors>
+                    <toolkit:IconTintColorBehavior TintColor="Red"/>
+                </ImageButton.Behaviors>
+                </ImageButton>
                 <Label Grid.Column="1" Text="Mes livres" VerticalOptions="Center" Margin="15,0,0,0  "/>
                 <Label Grid.Column="2" Text="Tous" VerticalOptions="Center" HorizontalOptions="Center"/>
-                <Image Grid.Column="3" Source="plus" VerticalOptions="Center" HorizontalOptions="End" Margin="0,0,15,0"/>
-                <Image Grid.Column="4" Source="arrow_up_arrow_down" VerticalOptions="Center" HorizontalOptions="End"/>
+                <Image Grid.Column="3" Source="plus" VerticalOptions="Center" HorizontalOptions="End" Margin="0,0,15,0">
+                    <Image.Behaviors>
+                        <toolkit:IconTintColorBehavior TintColor="Red"/>
+                    </Image.Behaviors>
+                </Image>
+                <Image Grid.Column="4" Source="arrow_up_arrow_down" VerticalOptions="Center" HorizontalOptions="End">
+                    <Image.Behaviors>
+                        <toolkit:IconTintColorBehavior TintColor="Red"/>
+                    </Image.Behaviors>
+                </Image>
             </Grid>
 
         <ScrollView Grid.Row="1"
