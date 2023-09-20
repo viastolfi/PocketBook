@@ -78,31 +78,32 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\Model\Model.csproj" />
 	  <ProjectReference Include="..\Stub\Stub.csproj" />
+	  <ProjectReference Include="..\WrapperViewModel\WrapperViewModel.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="AllAuthorsPage.xaml">
+	  <MauiXaml Update="Pages\AllAuthorsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="AllBooksPage.xaml">
+	  <MauiXaml Update="Pages\AllBooksPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="AltTab.xaml">
+	  <MauiXaml Update="Views\AltTab.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="BookPreviewCV.xaml">
+	  <MauiXaml Update="Views\BookPreviewCV.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MyListsPage.xaml">
+	  <MauiXaml Update="Pages\MyListsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MyReadingsPage.xaml">
+	  <MauiXaml Update="Pages\MyReadingsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="SearchPage.xaml">
+	  <MauiXaml Update="Pages\SearchPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="SpecificBookDescription.xaml">
+	  <MauiXaml Update="Pages\SpecificBookDescription.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

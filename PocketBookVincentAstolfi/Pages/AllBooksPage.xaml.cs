@@ -10,14 +10,14 @@ public partial class AllBooksPage : ContentPage
 	{
 		InitializeComponent();
 
-		MyCollectionView.ItemsSource = GetAuthors();
+		//MyCollectionView.ItemsSource = GetAuthors();
 	}
 
-	private List<Author> GetAuthors()
-	{
-		PocketBookStub pocketBookStub = new PocketBookStub();
-		return pocketBookStub.authors;
-	}
+	//private List<Author> GetAuthors()
+	//{
+	//	PocketBookStub pocketBookStub = new PocketBookStub();
+	//	return pocketBookStub.authors;
+	//}
 
 	async private void GoBackClick(object sender, EventArgs e)
 	{

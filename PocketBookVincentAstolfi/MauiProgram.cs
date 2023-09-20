@@ -1,5 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
+using Model;
+using PocketBookVincentAstolfi.Stub;
+using WrapperViewModel;
 
 namespace PocketBookVincentAstolfi;
 
@@ -10,12 +13,17 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
-            .UseMauiCommunityToolkit()
+			.UseMauiCommunityToolkit()
             .ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
+
+		builder.Services
+			.AddSingleton<ILibManager, PocketBookStub>()
+			.AddTransient<BooksViewModel>()
+			.AddTransient<AllBooksPage>();
 
 #if DEBUG
 		builder.Logging.AddDebug();

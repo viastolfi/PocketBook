@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net7.0;net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
@@ -18,9 +18,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Model\Model.csproj" />
-	  <ProjectReference Include="..\StubDTO\StubDTO.csproj" />
-	  <ProjectReference Include="..\Utils\Utils.csproj" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\LibraryDTO\LibraryDTO.csproj" />
 	</ItemGroup>
 
 </Project>
