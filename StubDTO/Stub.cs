@@ -8,11 +8,11 @@ namespace StubDTO
     public class Stub
     {
         public List<BookDTO> Books { get; set; } = new List<BookDTO>();
-        public static string BasePath { get; set; } = "";
+        public static string BasePath { get; set; } = "./";
 
         public Stub() 
         {
-            foreach (var fileBook in new DirectoryInfo($"{BasePath}books/").GetFiles())
+            foreach (var fileBook in new DirectoryInfo("books").GetFiles())
             {
                 using (StreamReader reader = File.OpenText(fileBook.FullName))
                 {

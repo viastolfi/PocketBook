@@ -20,7 +20,7 @@
         <Tab Title="My Readings"
              Icon="bookmark_fill.svg">
             <ShellContent Title="My Reading"
-                          ContentTemplate="{DataTemplate local:MyReadingsPage}">
+                          ContentTemplate="{DataTemplate local:AllBooksPage}">
             </ShellContent>
         </Tab>
         <Tab Title="Search"
@@ -30,5 +30,4 @@
             </ShellContent>
         </Tab>
     </TabBar>
-
 </Shell>

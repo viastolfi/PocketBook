@@ -16,7 +16,7 @@ namespace WrapperViewModel
 
         }
 
-        private async Task<List<Book>> GetBooks()
+        public async Task<List<Book>> GetBooks()
         {
             return await LibManager.GetBooks();
         }

@@ -29,10 +29,6 @@ public partial class AltTab : ContentView
 
 	async void OnTapGestureRecognizerTapped(object sender, EventArgs e)
 	{
-        if (TargetPageType != null)
-        {
-            var page = (Page)Activator.CreateInstance(TargetPageType);
-            await Navigation.PushAsync(page);
-        }
+		await Shell.Current.GoToAsync("AllBooksPage");
     }
 }
