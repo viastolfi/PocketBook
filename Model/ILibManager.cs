@@ -8,6 +8,7 @@ namespace Model
 {
     public interface ILibManager
     {
-        Task<List<Book>> GetBooks();
+        List<Book> GetBooks();
+        Book GetBook();
     }
 }

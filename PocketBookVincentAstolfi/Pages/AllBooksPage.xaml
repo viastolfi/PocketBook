@@ -1,12 +1,18 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PocketBookVincentAstolfi.AllBooksPage"
              xmlns:custom_components="clr-namespace:PocketBookVincentAstolfi"
              Shell.NavBarIsVisible="False"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
-    
-    <Grid RowDefinitions="Auto, *">
+
+    <Grid RowDefinitions="Auto, Auto">
+        <Label Text="{Binding Name}"/>
+
+        <Label Text="{Binding Id}"/>
+    </Grid>
+
+    <!--<Grid RowDefinitions="Auto, *">
         <Grid Grid.Row="0" Margin="0,15,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
@@ -42,7 +48,7 @@
                     <DataTemplate>
                         <StackLayout>
                             <Border Background="{StaticResource Gray100}" Padding="5" Margin="-5,0,-5,0" StrokeThickness="0">
-                                <Label Text="{Binding Name}" Margin="5,0,0,0"/>
+                                <Label Text="HAAAA" Margin="5,0,0,0"/>
                                 
                             </Border>
 
@@ -52,5 +58,5 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </ScrollView>
-    </Grid>
+    </Grid>-->
 </ContentPage>

@@ -7,18 +7,15 @@ using WrapperViewModel;
 
 public partial class AllBooksPage : ContentPage
 {
-	public AllBooksPage(ILibManager manager)
+	private BooksViewModel Manager;
+	public AllBooksPage(BooksViewModel manager)
 	{
 		InitializeComponent();
 
-		MyCollectionView.ItemsSource = (System.Collections.IEnumerable)manager.GetBooks();
-	}
+		Manager = manager;
 
-	//private List<Author> GetAuthors()
-	//{
-	//	PocketBookStub pocketBookStub = new PocketBookStub();
-	//	return pocketBookStub.authors;
-	//} 
+		BindingContext = manager;
+	}
 
 	async private void GoBackClick(object sender, EventArgs e)
 	{

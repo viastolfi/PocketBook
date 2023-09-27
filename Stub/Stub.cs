@@ -1,5 +1,4 @@
 ﻿using Model;
-using Stub;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +9,22 @@ namespace PocketBookVincentAstolfi.Stub
 {
     public class PocketBookStub : ILibManager
     {
-        private StubDTO.Stub StubDTO { get; set; } = new StubDTO.Stub();
+        private List<Book> Books = new List<Book>();
+
         public PocketBookStub()
         {
+            Book b = new Book("1", "Le Temps des Tempêtes");
+            Books.Add(b);
         }
 
-        public async Task<List<Book>> GetBooks()
+        public Book GetBook()
         {
-            return (List<Book>)(await StubDTO.GetBooks()).ToPocos();
+            return Books.First();
+        }
+
+        public List<Book> GetBooks()
+        {
+            return Books;
         }
     }
 }

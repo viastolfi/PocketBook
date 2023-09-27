@@ -15,7 +15,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="374eec2c-3996-405e-806f-b98cc4ec9408" name="Changes" comment="" />
+    <list default="true" id="374eec2c-3996-405e-806f-b98cc4ec9408" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PocketBookVincentAstolfi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PocketBookVincentAstolfi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/AppShell.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/AppShell.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/Pages/AllBooksPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/Pages/AllBooksPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StubDTO/Stub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StubDTO/Stub.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,36 +29,36 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2VwjA9XcJdifTR1uZeyD5hJe6Dh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Device#class com.jetbrains.rider.run.xamarin.ios.devices.XamarinIOSSimulatorKind#com.jetbrains.rider.run.xamarin.ios.devices.XamarinIOSDevicesProvider#Xamarin.iOS: PocketBookVincentAstolfi": "iPhone 15",
-    "DeviceKind#com.jetbrains.rider.run.xamarin.ios.devices.XamarinIOSDevicesProvider": "Simulator",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Device#class com.jetbrains.rider.run.xamarin.ios.devices.XamarinIOSSimulatorKind#com.jetbrains.rider.run.xamarin.ios.devices.XamarinIOSDevicesProvider#Xamarin.iOS: PocketBookVincentAstolfi&quot;: &quot;iPhone 15&quot;,
+    &quot;DeviceKind#com.jetbrains.rider.run.xamarin.ios.devices.XamarinIOSDevicesProvider&quot;: &quot;Simulator&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/vincentastolfi/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
-      "/Users/vincentastolfi/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache",
-      "/Users/vincentastolfi/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/vincentastolfi/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/vincentastolfi/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache&quot;,
+      &quot;/Users/vincentastolfi/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Xamarin.iOS.PocketBookVincentAstolfi">
     <configuration name="JsonReader" type="XamarinIOSProject" factoryName="Xamarin.iOS">
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/JsonReader/JsonReader.csproj" />
@@ -130,6 +135,7 @@
       <option name="presentableId" value="Default" />
       <updated>1695753892300</updated>
       <workItem from="1695753893959" duration="457000" />
+      <workItem from="1695803206158" duration="100000" />
     </task>
     <servers />
   </component>
