@@ -8,10 +8,10 @@ using WrapperViewModel;
 
 public partial class AllBooksPage : ContentPage
 {
-	public BooksViewModel Manager { get; private set; }
+	public AuthorsViewModel Manager { get; private set; }
 	public NavigationViewModel NavigationManager { get; private set; }
 
-	public AllBooksPage(BooksViewModel manager, NavigationViewModel navigationManager)
+	public AllBooksPage(AuthorsViewModel manager, NavigationViewModel navigationManager)
 	{
 		InitializeComponent();
 

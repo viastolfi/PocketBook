@@ -7,8 +7,8 @@ public partial class MainPage : ContentPage
 	public NavigationViewModel Manager { get; private set; }
 	public MainPage(NavigationViewModel vm)
 	{
-		InitializeComponent();
 		Manager = vm;
+		InitializeComponent();
 		BindingContext = Manager;
 	}
 }

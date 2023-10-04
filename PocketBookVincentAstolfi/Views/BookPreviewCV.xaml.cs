@@ -18,6 +18,7 @@ public partial class BookPreviewCV : ContentView
 	{
         InitializeComponent();
 	}
+
     async void OnTapGestureRecognizerTapped(object sender, EventArgs e)
     {
         if (sender is View tappedView && tappedView.BindingContext is Book selectedBook)

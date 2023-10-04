@@ -29,7 +29,7 @@ namespace WrapperViewModel
         {
             this.LibManager = libManager;
 
-            Book b = libManager.GetBook();
+            Book b = LibManager.GetBook();
             Name = b.Title;
             Id = b.Id;
         }

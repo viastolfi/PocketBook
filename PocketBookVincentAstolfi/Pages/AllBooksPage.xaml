@@ -36,11 +36,20 @@
                 </Grid>
             </Grid>
 
-        <Grid RowDefinitions="Auto, Auto">
-            <Label Text="{Binding Manager.Name}"/>
-
-            <Label Text="{Binding Manager.Id}"/>
-        </Grid>
+        <ScrollView>
+            <CollectionView ItemsSource="{Binding Manager.Authors}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding Name}"/>
+                            <BoxView Color="Black" WidthRequest="5000" HeightRequest="0.5"/>
+                            <custom_components:BookPreviewCV Books="{Binding WritedBooks}"/>
+                            <BoxView Color="Black" WidthRequest="5000" HeightRequest="0.5"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+         </ScrollView>
     </StackLayout>
         <!--<ScrollView Grid.Row="1"
                     VerticalOptions="FillAndExpand"

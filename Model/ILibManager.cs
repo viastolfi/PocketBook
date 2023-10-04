@@ -10,5 +10,6 @@ namespace Model
     {
         List<Book> GetBooks();
         Book GetBook();
+        List<Author> GetAuthors(); 
     }
 }

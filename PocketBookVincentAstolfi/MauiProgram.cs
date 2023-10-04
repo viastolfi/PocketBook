@@ -23,8 +23,11 @@ public static class MauiProgram
 
 		builder.Services
 			.AddSingleton<ILibManager, PocketBookStub>()
+
 			.AddTransient<BooksViewModel>()
 			.AddTransient<NavigationViewModel>()
+			.AddTransient<AuthorsViewModel>()
+
 			.AddTransient<MainPage>()
 			.AddTransient<AllBooksPage>()
 			.AddTransient<AllAuthorsPage>();

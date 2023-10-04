@@ -5,6 +5,7 @@
              Title="AllAuthorsPage"
              Shell.NavBarIsVisible="False"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+
     <VerticalStackLayout>
         <Grid Grid.Row="0" Margin="0,15,15,0">
             <Grid.ColumnDefinitions>
@@ -32,7 +33,7 @@
 
 
         <ScrollView>
-            <CollectionView x:Name="MyCollectionView">
+            <CollectionView x:Name="MyCollectionView" ItemsSource="{Binding Manager.Authors}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <VerticalStackLayout Margin="15,0,15,0">
