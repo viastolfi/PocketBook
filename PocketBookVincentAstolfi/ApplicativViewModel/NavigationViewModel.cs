@@ -5,14 +5,20 @@ namespace PocketBookVincentAstolfi.ApplicativViewModel
 {
 	public class NavigationViewModel 
 	{
-		public ICommand NavigateToAllBooksCommand { get; private set; }
+		public ICommand NavigateToPage { get; private set; }
+		public ICommand NavigateBackCommand { get; private set; }
 
 		public NavigationViewModel()
 		{
-			NavigateToAllBooksCommand = new Command<string>(
+			NavigateToPage = new Command<string>(
 				async (string path) => await Shell.Current.GoToAsync(path)
 			);
+
+			NavigateBackCommand = new Command(
+				async () => await Shell.Current.GoToAsync("..")
+			);
 		}
+
 	}
 }
 

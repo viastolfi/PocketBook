@@ -1,21 +1,24 @@
 namespace PocketBookVincentAstolfi;
 
 using Model;
+using PocketBookVincentAstolfi.ApplicativViewModel;
 using PocketBookVincentAstolfi.Stub;
 using System.Collections.ObjectModel;
 using WrapperViewModel;
 
 public partial class AllBooksPage : ContentPage
 {
-	private BooksViewModel Manager;
+	public BooksViewModel Manager { get; private set; }
+	public NavigationViewModel NavigationManager { get; private set; }
 
-	public AllBooksPage(BooksViewModel manager)
+	public AllBooksPage(BooksViewModel manager, NavigationViewModel navigationManager)
 	{
 		InitializeComponent();
 
 		Manager = manager;
+		NavigationManager = navigationManager;
 
-		BindingContext = manager;
+		BindingContext = this;
 	}
 
 	async private void GoBackClick(object sender, EventArgs e)

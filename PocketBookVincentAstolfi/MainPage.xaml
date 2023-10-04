@@ -32,7 +32,7 @@
             <custom_components:AltTab SectionTitle="Tous"
                                       SectionIcon="bookmark_fill"
                                       OccurrencieNumber="45"
-                                      Command="{Binding NavigateToAllBooksCommand}"
+                                      Command="{Binding NavigateToPage}"
                                       CommandParameter="AllBooksPage"/>
 
             <custom_components:AltTab SectionTitle="En prêt"
@@ -62,7 +62,7 @@
 
             <custom_components:AltTab SectionTitle="Auteur"
                                       SectionIcon="person_fill"
-                                      Command="{Binding NavigateToAllBooksCommand}"
+                                      Command="{Binding NavigateToPage}"
                                       CommandParameter="AllAuthorsPage"/>
 
             <custom_components:AltTab SectionTitle="Date de publication"

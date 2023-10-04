@@ -26,7 +26,8 @@ public static class MauiProgram
 			.AddTransient<BooksViewModel>()
 			.AddTransient<NavigationViewModel>()
 			.AddTransient<MainPage>()
-			.AddTransient<AllBooksPage>();
+			.AddTransient<AllBooksPage>()
+			.AddTransient<AllAuthorsPage>();
 
 #if DEBUG
 		builder.Logging.AddDebug();

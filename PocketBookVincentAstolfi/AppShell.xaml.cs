@@ -8,6 +8,5 @@ public partial class AppShell : Shell
 
 		Routing.RegisterRoute("AllBooksPage", typeof(AllBooksPage));
         Routing.RegisterRoute("AllAuthorsPage", typeof(AllAuthorsPage));
-        Routing.RegisterRoute("AllBooksPage", typeof(AllBooksPage));
     }
 }
