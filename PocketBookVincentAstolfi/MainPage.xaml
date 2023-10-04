@@ -31,8 +31,9 @@
 
             <custom_components:AltTab SectionTitle="Tous"
                                       SectionIcon="bookmark_fill"
-                                      TargetPageType="{x:Type custom_components:AllBooksPage}"
-                                      OccurrencieNumber="45"/>
+                                      OccurrencieNumber="45"
+                                      Command="{Binding NavigateToAllBooksCommand}"
+                                      CommandParameter="AllBooksPage"/>
 
             <custom_components:AltTab SectionTitle="En prêt"
                                       SectionIcon="person_badge_clock_fill"
@@ -60,8 +61,9 @@
             <BoxView WidthRequest="500" HeightRequest="0.5"/>
 
             <custom_components:AltTab SectionTitle="Auteur"
-                                      TargetPageType="{x:Type custom_components:AllAuthorsPage}"
-                                      SectionIcon="person_fill"/>
+                                      SectionIcon="person_fill"
+                                      Command="{Binding NavigateToAllBooksCommand}"
+                                      CommandParameter="AllAuthorsPage"/>
 
             <custom_components:AltTab SectionTitle="Date de publication"
                                       SectionIcon="calendar"/>

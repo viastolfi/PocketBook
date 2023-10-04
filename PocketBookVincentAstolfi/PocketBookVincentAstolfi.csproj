@@ -71,6 +71,7 @@
 	  <None Remove="Resources\Images\sparkles.svg" />
 	  <None Remove="Resources\Images\tag_fill.svg" />
 	  <None Remove="Resources\Images\tray_2_fill.svg" />
+	  <None Remove="ApplicativViewModel\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -111,4 +112,7 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="ApplicativViewModel\" />
+	</ItemGroup>
 </Project>

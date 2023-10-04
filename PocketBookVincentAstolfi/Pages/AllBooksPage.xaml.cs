@@ -8,6 +8,7 @@ using WrapperViewModel;
 public partial class AllBooksPage : ContentPage
 {
 	private BooksViewModel Manager;
+
 	public AllBooksPage(BooksViewModel manager)
 	{
 		InitializeComponent();

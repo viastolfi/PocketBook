@@ -3,6 +3,7 @@ using CommunityToolkit.Maui;
 using Model;
 using PocketBookVincentAstolfi.Stub;
 using WrapperViewModel;
+using PocketBookVincentAstolfi.ApplicativViewModel;
 
 namespace PocketBookVincentAstolfi;
 
@@ -23,6 +24,8 @@ public static class MauiProgram
 		builder.Services
 			.AddSingleton<ILibManager, PocketBookStub>()
 			.AddTransient<BooksViewModel>()
+			.AddTransient<NavigationViewModel>()
+			.AddTransient<MainPage>()
 			.AddTransient<AllBooksPage>();
 
 #if DEBUG
