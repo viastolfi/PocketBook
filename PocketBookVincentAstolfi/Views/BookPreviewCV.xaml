@@ -1,29 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:PocketBookVincentAstolfi.ApplicativViewModel"
              x:Name="BookPreviewWindow"
              x:Class="PocketBookVincentAstolfi.BookPreviewCV">
 
     <HorizontalStackLayout BindingContext="{x:Reference BookPreviewWindow}">
-        <CollectionView ItemsSource="{Binding Books}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <HorizontalStackLayout>
-                        <HorizontalStackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped"/>
-                        </HorizontalStackLayout.GestureRecognizers>
-                        <!--<Image Source="{Binding Cover}" Margin="10"/>-->
+        <ScrollView>
+            <CollectionView ItemsSource="{Binding Books}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <HorizontalStackLayout>
+                            <HorizontalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Command, Source={x:Reference BookPreviewWindow}}"
+                                                      CommandParameter="{Binding Id}"/>
+                            </HorizontalStackLayout.GestureRecognizers>
+                            <!--<Image Source="{Binding Cover}" Margin="10"/>-->
 
-                        <Grid Margin="10,10,0,0" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
-                            <BoxView Color="Black" Grid.Row="0" WidthRequest="5000" HeightRequest="0.5"/>
-                            <Label Grid.Row="1" FontAttributes="Bold" Text="{Binding Title}"/>
-                            <!--<Label Grid.Row="1" Text="{Binding Author.Name}"/>-->
-                            <Label Grid.Row="2" Text="Non lu"/>
-                            <Label Grid.Row="3" Text="Etoiles"/>
-                        </Grid>
-                    </HorizontalStackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+                            <Grid Margin="10,10,0,0" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
+                                <BoxView Color="Black" Grid.Row="0" WidthRequest="5000" HeightRequest="0.5"/>
+                                <Label Grid.Row="1" FontAttributes="Bold" Text="{Binding Title}"/>
+                                <!--<Label Grid.Row="1" Text="{Binding Author.Name}"/>-->
+                                <Label Grid.Row="2" Text="{Binding Status}"/>
+                                <Label Grid.Row="3" Text="Etoiles"/>
+                            </Grid>
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
     </HorizontalStackLayout>
 </ContentView>

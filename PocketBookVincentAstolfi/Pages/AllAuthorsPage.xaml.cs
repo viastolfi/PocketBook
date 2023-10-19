@@ -2,7 +2,7 @@ namespace PocketBookVincentAstolfi;
 
 using Model;
 using PocketBookVincentAstolfi.ApplicativViewModel;
-using PocketBookVincentAstolfi.Stub;
+using Stub;
 using WrapperViewModel;
 
 

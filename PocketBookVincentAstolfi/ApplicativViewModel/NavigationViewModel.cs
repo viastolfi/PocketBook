@@ -8,7 +8,7 @@ namespace PocketBookVincentAstolfi.ApplicativViewModel
 		public ICommand NavigateToPage { get; private set; }
 		public ICommand NavigateBackCommand { get; private set; }
 
-		public NavigationViewModel()
+        public NavigationViewModel()
 		{
 			NavigateToPage = new Command<string>(
 				async (string path) => await Shell.Current.GoToAsync(path)
@@ -17,8 +17,9 @@ namespace PocketBookVincentAstolfi.ApplicativViewModel
 			NavigateBackCommand = new Command(
 				async () => await Shell.Current.GoToAsync("..")
 			);
-		}
 
+      
+        }
 	}
 }
 

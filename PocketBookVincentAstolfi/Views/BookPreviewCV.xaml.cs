@@ -1,29 +1,35 @@
 using Model;
-using PocketBookVincentAstolfi.Stub;
+using PocketBookVincentAstolfi.ApplicativViewModel;
+using Stub;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Windows.Input;
 
 namespace PocketBookVincentAstolfi;
 
 public partial class BookPreviewCV : ContentView
 {
+    public static readonly BindableProperty BooksProperty =
+        BindableProperty.Create(nameof(Books), typeof(ObservableCollection<Book>), typeof(BookPreviewCV), new ObservableCollection<Book>());
 
-    public static readonly BindableProperty BooksProperty = BindableProperty.Create(nameof(Books), typeof(List<Book>), typeof(BookPreviewCV), new List<Book>());
+    public static readonly BindableProperty CommandProperty =
+        BindableProperty.Create(nameof(Command), typeof(ICommand), typeof(BookPreviewCV));
     
-    public List<Book> Books
+    public ICommand Command
     {
-        get => (List<Book>)GetValue(BooksProperty);
+        get => (ICommand)GetValue(CommandProperty);
+        set => SetValue(CommandProperty, value);
+    }
+    
+    public ObservableCollection<Book> Books
+    {
+        get => (ObservableCollection<Book>)GetValue(BooksProperty);
         set => SetValue(BooksProperty, value);
     }
+
     public BookPreviewCV()
 	{
         InitializeComponent();
 	}
 
-    async void OnTapGestureRecognizerTapped(object sender, EventArgs e)
-    {
-        if (sender is View tappedView && tappedView.BindingContext is Book selectedBook)
-        {
-            await Navigation.PushAsync(new SpecificBookDescription(selectedBook));
-        }
-    }
 }

@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
-using Model;
-using PocketBookVincentAstolfi.Stub;
 using WrapperViewModel;
 using PocketBookVincentAstolfi.ApplicativViewModel;
+using Model;
+using Stub;
 
 namespace PocketBookVincentAstolfi;
 
@@ -22,15 +22,17 @@ public static class MauiProgram
 			});
 
 		builder.Services
-			.AddSingleton<ILibManager, PocketBookStub>()
+			.AddSingleton<ILibManager, Stub.Stub>()
 
-			.AddTransient<BooksViewModel>()
+			.AddSingleton<BookViewModel>()
 			.AddTransient<NavigationViewModel>()
-			.AddTransient<AuthorsViewModel>()
+			.AddSingleton<AuthorsViewModel>()
+			.AddSingleton<SpecificBookPageViewModel>()
 
 			.AddTransient<MainPage>()
 			.AddTransient<AllBooksPage>()
-			.AddTransient<AllAuthorsPage>();
+			.AddTransient<AllAuthorsPage>()
+			.AddTransient<SpecificBookDescription>();
 
 #if DEBUG
 		builder.Logging.AddDebug();

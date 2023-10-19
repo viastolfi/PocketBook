@@ -1,13 +1,20 @@
-using Model;
+using System.Net;
+using PocketBookVincentAstolfi.ApplicativViewModel;
+using WrapperViewModel;
 
 namespace PocketBookVincentAstolfi;
 
 public partial class SpecificBookDescription : ContentPage
 {
-    public SpecificBookDescription(Book selectedBook)
+    private SpecificBookPageViewModel SpecificBookPageViewModel;
+
+    public SpecificBookDescription(SpecificBookPageViewModel specificBookPageViewModel)
     {
+        SpecificBookPageViewModel = specificBookPageViewModel;
+
         InitializeComponent();
-        BindingContext = selectedBook; 
+
+        BindingContext = SpecificBookPageViewModel;
     }
 
     async private void GoBackClick(object sender, EventArgs e)

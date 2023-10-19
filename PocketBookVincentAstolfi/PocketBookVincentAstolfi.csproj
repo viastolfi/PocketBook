@@ -80,9 +80,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Stub\Stub.csproj" />
-	  <ProjectReference Include="..\WrapperViewModel\WrapperViewModel.csproj" />
-	  <ProjectReference Include="..\Model\Model.csproj" />
+	  <ProjectReference Include="..\Test\WrapperViewModel.csproj" />
+	  <ProjectReference Include="..\zd\Model.csproj" />
+	  <ProjectReference Include="..\temp\Stub.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

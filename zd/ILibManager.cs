@@ -9,7 +9,7 @@ namespace Model
     public interface ILibManager
     {
         List<Book> GetBooks();
-        Book GetBook();
-        List<Author> GetAuthors(); 
+        List<Author> GetAuthors();
+        Book GetBookById(string Id);
     }
 }

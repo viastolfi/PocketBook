@@ -11,11 +11,13 @@ namespace Model
     {
         public string Id { get; set; }
         public string Title {get; set;}
+        public Status Status { get; set; }
 
         public Book(string id, string title)
         {
             Id = id;
             Title = title;
+            Status = Status.Unread;
         }
     }
 }

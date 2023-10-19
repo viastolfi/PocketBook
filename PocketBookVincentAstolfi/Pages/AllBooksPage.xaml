@@ -4,7 +4,8 @@
              x:Class="PocketBookVincentAstolfi.AllBooksPage"
              xmlns:custom_components="clr-namespace:PocketBookVincentAstolfi"
              Shell.NavBarIsVisible="False"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Name="AllBooksPageWindow">
 
     <StackLayout>
         <Grid RowDefinitions="Auto, *">
@@ -42,9 +43,9 @@
                     <DataTemplate>
                         <StackLayout>
                             <Label Text="{Binding Name}"/>
-                            <BoxView Color="Black" WidthRequest="5000" HeightRequest="0.5"/>
-                            <custom_components:BookPreviewCV Books="{Binding WritedBooks}"/>
-                            <BoxView Color="Black" WidthRequest="5000" HeightRequest="0.5"/>
+                            <custom_components:BookPreviewCV Books="{Binding Books}"
+                                                             Command="{Binding NavigationManager.NavigateToPageWithBookCommand, Source={x:Reference AllBooksPageWindow}}"
+                                                             />
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

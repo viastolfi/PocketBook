@@ -7,6 +7,7 @@ namespace MyToolkit;
 public class ObervableObject : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler? PropertyChanged;
+
     void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
     protected void MyOnPropertyChanged<T>(ref T property, T value, [CallerMemberName] string name = "")
