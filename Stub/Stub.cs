@@ -3,7 +3,7 @@ using Model;
 
 namespace Stub
 { 
-	public class Stub : ILibManager
+	public class PocketBookStub : ILibManager
 	{
 		public List<Book> Books = new List<Book>
 			{
@@ -13,7 +13,7 @@ namespace Stub
 
 		public List<Author> Authors = new List<Author>();
 
-		public Stub()
+		public PocketBookStub()
 		{
 			Authors.Add(new Author("Nicolas Sarkozy", Books));
 		}

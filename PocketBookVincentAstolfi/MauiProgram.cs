@@ -22,7 +22,7 @@ public static class MauiProgram
 			});
 
 		builder.Services
-			.AddSingleton<ILibManager, Stub.Stub>()
+			.AddSingleton<ILibManager, PocketBookStub>()
 
 			.AddSingleton<BookViewModel>()
 			.AddTransient<NavigationViewModel>()
