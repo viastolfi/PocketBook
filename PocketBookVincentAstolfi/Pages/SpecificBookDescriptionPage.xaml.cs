@@ -4,11 +4,11 @@ using WrapperViewModel;
 
 namespace PocketBookVincentAstolfi;
 
-public partial class SpecificBookDescription : ContentPage
+public partial class SpecificBookDescriptionPage : ContentPage
 {
     private SpecificBookPageViewModel SpecificBookPageViewModel;
 
-    public SpecificBookDescription(SpecificBookPageViewModel specificBookPageViewModel)
+    public SpecificBookDescriptionPage(SpecificBookPageViewModel specificBookPageViewModel)
     {
         SpecificBookPageViewModel = specificBookPageViewModel;
 

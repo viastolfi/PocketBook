@@ -19,8 +19,9 @@ public partial class AllBooksPage : ContentPage
 		BindingContext = this;
 	}
 
-	async private void GoBackClick(object sender, EventArgs e)
-	{
-		await Navigation.PopAsync();
+    protected override void OnAppearing()
+    {
+		Manager.LoadData();
+        base.OnAppearing();
     }
 }

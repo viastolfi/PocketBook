@@ -18,7 +18,7 @@ namespace PocketBookVincentAstolfi.ApplicativViewModel
               async (string id) =>
               {
                   BookViewModel.GetBookById(id);
-                  var route = $"SpecificBookDescriptionPage?specificBookPageViewModel={this}";
+                  var route = "SpecificBookDescriptionPage";
                   await Shell.Current.GoToAsync(route);
               }
             );

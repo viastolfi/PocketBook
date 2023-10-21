@@ -29,26 +29,26 @@
 
             <BoxView WidthRequest="500" HeightRequest="0.5"/>
 
-            <custom_components:AltTab SectionTitle="Tous"
+            <custom_components:SubMenuContentView SectionTitle="Tous"
                                       SectionIcon="bookmark_fill"
                                       OccurrencieNumber="45"
                                       Command="{Binding NavigateToPage}"
                                       CommandParameter="AllBooksPage"/>
 
-            <custom_components:AltTab SectionTitle="En prêt"
+            <custom_components:SubMenuContentView SectionTitle="En prêt"
                                       SectionIcon="person_badge_clock_fill"
                                       OccurrencieNumber="1"/>
 
-            <custom_components:AltTab SectionTitle="À lire plus tard"
+            <custom_components:SubMenuContentView SectionTitle="À lire plus tard"
                                       SectionIcon="arrow_forward"/>
 
-            <custom_components:AltTab SectionTitle="Statut de lecture"
+            <custom_components:SubMenuContentView SectionTitle="Statut de lecture"
                                       SectionIcon="eyeglasses"/>
 
-            <custom_components:AltTab SectionTitle="Favoris"
+            <custom_components:SubMenuContentView SectionTitle="Favoris"
                                       SectionIcon="heart_fill"/>
 
-            <custom_components:AltTab SectionTitle="Etiquettes"
+            <custom_components:SubMenuContentView SectionTitle="Etiquettes"
                                       SectionIcon="tag_fill" Margin="0,0,0,-0.5"/>
 
             <BoxView WidthRequest="500" HeightRequest="0.5"/>
@@ -60,15 +60,15 @@
 
             <BoxView WidthRequest="500" HeightRequest="0.5"/>
 
-            <custom_components:AltTab SectionTitle="Auteur"
+            <custom_components:SubMenuContentView SectionTitle="Auteur"
                                       SectionIcon="person_fill"
                                       Command="{Binding NavigateToPage}"
                                       CommandParameter="AllAuthorsPage"/>
 
-            <custom_components:AltTab SectionTitle="Date de publication"
+            <custom_components:SubMenuContentView SectionTitle="Date de publication"
                                       SectionIcon="calendar"/>
 
-            <custom_components:AltTab SectionTitle="Note"
+            <custom_components:SubMenuContentView SectionTitle="Note"
                                       SectionIcon="sparkles" Margin="0,0,0,-0.5"/>
 
             <BoxView WidthRequest="500" HeightRequest="0.5"/>

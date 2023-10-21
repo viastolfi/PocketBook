@@ -7,13 +7,13 @@ using System.Windows.Input;
 
 namespace PocketBookVincentAstolfi;
 
-public partial class BookPreviewCV : ContentView
+public partial class BookPreviewContentView : ContentView
 {
     public static readonly BindableProperty BooksProperty =
-        BindableProperty.Create(nameof(Books), typeof(ObservableCollection<Book>), typeof(BookPreviewCV), new ObservableCollection<Book>());
+        BindableProperty.Create(nameof(Books), typeof(ObservableCollection<Book>), typeof(BookPreviewContentView), new ObservableCollection<Book>());
 
     public static readonly BindableProperty CommandProperty =
-        BindableProperty.Create(nameof(Command), typeof(ICommand), typeof(BookPreviewCV));
+        BindableProperty.Create(nameof(Command), typeof(ICommand), typeof(BookPreviewContentView));
     
     public ICommand Command
     {
@@ -27,7 +27,7 @@ public partial class BookPreviewCV : ContentView
         set => SetValue(BooksProperty, value);
     }
 
-    public BookPreviewCV()
+    public BookPreviewContentView()
 	{
         InitializeComponent();
 	}

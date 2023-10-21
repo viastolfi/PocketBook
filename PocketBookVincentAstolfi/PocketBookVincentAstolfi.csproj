@@ -92,10 +92,10 @@
 	  <MauiXaml Update="Pages\AllBooksPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\AltTab.xaml">
+	  <MauiXaml Update="Views\SubMenuContentView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\BookPreviewCV.xaml">
+	  <MauiXaml Update="Views\BookPreviewContentView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\MyListsPage.xaml">
@@ -107,7 +107,7 @@
 	  <MauiXaml Update="Pages\SearchPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\SpecificBookDescription.xaml">
+	  <MauiXaml Update="Pages\SpecificBookDescriptionPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

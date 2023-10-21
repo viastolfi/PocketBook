@@ -16,42 +16,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="374eec2c-3996-405e-806f-b98cc4ec9408" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Model/Author.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Author.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Book.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Book.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/ILibManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/ILibManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Model.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Model.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Platforms/Android/PlatformClass1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Platforms/MacCatalyst/PlatformClass1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Platforms/Tizen/PlatformClass1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Platforms/Windows/PlatformClass1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Platforms/iOS/PlatformClass1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyToolkit/ObservableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyToolkit/ObservableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi.sln" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PocketBookVincentAstolfi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PocketBookVincentAstolfi/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/AppShell.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/AppShell.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/ApplicativViewModel/NavigationViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/ApplicativViewModel/NavigationViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/ApplicativViewModel/SpecificBookPageViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/ApplicativViewModel/SpecificBookPageViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/MainPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/MainPage.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/MauiProgram.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/MauiProgram.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/Pages/AllBooksPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/Pages/AllBooksPage.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/Pages/AllBooksPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/Pages/AllBooksPage.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/Pages/SpecificBookDescription.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/Pages/SpecificBookDescription.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/Pages/SpecificBookDescription.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/Pages/SpecificBookDescription.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/Pages/BookDescriptionPage.xaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/Pages/BookDescriptionPage.xaml.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/Pages/SpecificBookDescription.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/Pages/SpecificBookDescriptionPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/Pages/SpecificBookDescription.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/Pages/SpecificBookDescriptionPage.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/PocketBookVincentAstolfi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/PocketBookVincentAstolfi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/Views/BookPreviewCV.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/Views/BookPreviewCV.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/Views/BookPreviewCV.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/Views/BookPreviewCV.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stub/Platforms/Android/PlatformClass1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stub/Platforms/MacCatalyst/PlatformClass1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stub/Platforms/Tizen/PlatformClass1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stub/Platforms/Windows/PlatformClass1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stub/Platforms/iOS/PlatformClass1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stub/Stub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Stub/Stub.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stub/Stub.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Stub/Stub.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/Views/AltTab.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/Views/SubMenuContentView.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/Views/AltTab.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/Views/SubMenuContentView.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/Views/BookPreviewCV.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/Views/BookPreviewContentView.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PocketBookVincentAstolfi/Views/BookPreviewCV.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PocketBookVincentAstolfi/Views/BookPreviewContentView.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WrapperViewModel/AuthorsViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WrapperViewModel/AuthorsViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WrapperViewModel/BookViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WrapperViewModel/BookViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WrapperViewModel/Platforms/Android/PlatformClass1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WrapperViewModel/Platforms/MacCatalyst/PlatformClass1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WrapperViewModel/Platforms/Tizen/PlatformClass1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WrapperViewModel/Platforms/Windows/PlatformClass1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WrapperViewModel/Platforms/iOS/PlatformClass1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WrapperViewModel/WrapperViewModel.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WrapperViewModel/WrapperViewModel.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WrapperViewModel/WrapperViewModel.sln" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +45,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/WrapperViewModel/AuthorsViewModel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WrapperViewModel/AuthorsViewModel.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -172,6 +155,9 @@
       <workItem from="1695753893959" duration="457000" />
       <workItem from="1695803206158" duration="100000" />
       <workItem from="1697706109926" duration="37000" />
+      <workItem from="1697883265921" duration="8000" />
+      <workItem from="1697883287833" duration="605000" />
+      <workItem from="1697886723243" duration="227000" />
     </task>
     <servers />
   </component>

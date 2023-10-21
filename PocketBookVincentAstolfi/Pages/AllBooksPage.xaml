@@ -43,7 +43,7 @@
                     <DataTemplate>
                         <StackLayout>
                             <Label Text="{Binding Name}"/>
-                            <custom_components:BookPreviewCV Books="{Binding Books}"
+                            <custom_components:BookPreviewContentView Books="{Binding Books}"
                                                              Command="{Binding NavigationManager.NavigateToPageWithBookCommand, Source={x:Reference AllBooksPageWindow}}"
                                                              />
                         </StackLayout>

@@ -32,7 +32,7 @@ public static class MauiProgram
 			.AddTransient<MainPage>()
 			.AddTransient<AllBooksPage>()
 			.AddTransient<AllAuthorsPage>()
-			.AddTransient<SpecificBookDescription>();
+			.AddTransient<SpecificBookDescriptionPage>();
 
 #if DEBUG
 		builder.Logging.AddDebug();

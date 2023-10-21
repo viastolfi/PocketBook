@@ -2,7 +2,6 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Model;
-using MyToolkit;
 
 namespace WrapperViewModel
 {
@@ -24,6 +23,7 @@ namespace WrapperViewModel
 
         public void LoadData()
 		{
+            _authors.Clear();
             foreach (Author a in Manager.GetAuthors())
             {
                 _authors.Add(new AuthorViewModel(a));
