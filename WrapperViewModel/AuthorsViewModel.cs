@@ -22,15 +22,18 @@ namespace WrapperViewModel
 
 		private ILibManager Manager;
 
+        public void LoadData()
+		{
+            foreach (Author a in Manager.GetAuthors())
+            {
+                _authors.Add(new AuthorViewModel(a));
+            }
+        }
 
         public AuthorsViewModel(ILibManager manager)
 		{
 			Manager = manager;
-            List<Author> authors = Manager.GetAuthors();
-			foreach(Author a in authors)
-			{
-				_authors.Add(new AuthorViewModel(a));
-			}
+			LoadData();
 		}
 
         public event PropertyChangedEventHandler? PropertyChanged;

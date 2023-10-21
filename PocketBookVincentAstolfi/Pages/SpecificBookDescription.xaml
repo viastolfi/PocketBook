@@ -7,7 +7,7 @@
 
 <VerticalStackLayout>
     <Grid ColumnDefinitions="Auto, Auto, *" Margin="0,15,0,0">
-            <ImageButton Clicked="GoBackClick" Grid.Column="0" Source="chevron_right" Rotation="180" HorizontalOptions="Start" VerticalOptions="Center"/>
+            <ImageButton Command="{Binding NavigateBackCommand}" Grid.Column="0" Source="chevron_right" Rotation="180" HorizontalOptions="Start" VerticalOptions="Center"/>
             <Label Grid.Column="1" Text="Tous" VerticalOptions="Center" Margin="15,0,0,0  "/>
             <Label Grid.Column="2" Text="Detail du livre" VerticalOptions="Center" Margin="15,0,0,0  "/>
     </Grid>

@@ -16,9 +16,4 @@ public partial class SpecificBookDescription : ContentPage
 
         BindingContext = SpecificBookPageViewModel;
     }
-
-    async private void GoBackClick(object sender, EventArgs e)
-    {
-        await Navigation.PopAsync();
-    }
 }
