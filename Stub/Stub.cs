@@ -15,7 +15,9 @@ namespace Stub
 
 		public PocketBookStub()
 		{
-			Authors.Add(new Author("Nicolas Sarkozy", Books));
+			Author a = new Author("Nicolas Sarcozy");
+			a.WritedBooks = Books;
+			Authors.Add(a);
 		}
 
         public List<Author> GetAuthors()

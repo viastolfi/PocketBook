@@ -10,7 +10,8 @@ namespace PocketBookVincentAstolfi;
 public partial class BookPreviewContentView : ContentView
 {
     public static readonly BindableProperty BooksProperty =
-        BindableProperty.Create(nameof(Books), typeof(ObservableCollection<Book>), typeof(BookPreviewContentView), new ObservableCollection<Book>());
+        BindableProperty.Create(nameof(Books), typeof(
+            ReadOnlyObservableCollection<Book>), typeof(BookPreviewContentView));
 
     public static readonly BindableProperty CommandProperty =
         BindableProperty.Create(nameof(Command), typeof(ICommand), typeof(BookPreviewContentView));
@@ -21,9 +22,9 @@ public partial class BookPreviewContentView : ContentView
         set => SetValue(CommandProperty, value);
     }
     
-    public ObservableCollection<Book> Books
+    public ReadOnlyObservableCollection<Book> Books
     {
-        get => (ObservableCollection<Book>)GetValue(BooksProperty);
+        get => (ReadOnlyObservableCollection<Book>)GetValue(BooksProperty);
         set => SetValue(BooksProperty, value);
     }
 

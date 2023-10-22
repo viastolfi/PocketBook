@@ -25,14 +25,15 @@ public static class MauiProgram
 			.AddSingleton<ILibManager, PocketBookStub>()
 
 			.AddSingleton<BookViewModel>()
-			.AddTransient<NavigationViewModel>()
+			.AddSingleton<NavigationViewModel>()
+			.AddSingleton<AuthorViewModel>()
 			.AddSingleton<AuthorsViewModel>()
 			.AddSingleton<SpecificBookPageViewModel>()
 
 			.AddTransient<MainPage>()
 			.AddTransient<AllBooksPage>()
 			.AddTransient<AllAuthorsPage>()
-			.AddTransient<SpecificBookDescriptionPage>();
+			.AddSingleton<SpecificBookDescriptionPage>();
 
 #if DEBUG
 		builder.Logging.AddDebug();

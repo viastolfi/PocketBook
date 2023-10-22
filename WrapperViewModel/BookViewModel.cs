@@ -1,60 +1,36 @@
 ﻿using Model;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Windows.Input;
+using MyToolkit;
 
 namespace WrapperViewModel
 {
-    // All the code in this file is included in all platforms.
-    public class BookViewModel : INotifyPropertyChanged
+    public class BookViewModel : ObervableObject
     {
-        private Book book;
+        private Book _book;
         public string Name
         {
-            get => book.Title;
-            set
-            {
-                if(book.Title != value)
-                {
-                    book.Title = value;
-                    OnPropertyChanged(nameof(Name));
-                }
-            }
+            get => _book.Title;
+            set => MyOnPropertyChanged(_book.Title, value, v => _book.Title = v);
         }
 
         public string Id
         {
-            get => book.Id;
-            set
-            {
-                if(book.Id != value)
-                {
-                    book.Id = value;
-                    OnPropertyChanged(nameof(Id));
-                }
-            }
+            get => _book.Id;
+            set => MyOnPropertyChanged(_book.Id, value, v => _book.Id = v);
         }
 
         public Status Status
         {
-            get => book.Status;
-            set
-            {
-                if(book.Status != value)
-                {
-                    book.Status = value;
-                    OnPropertyChanged(nameof(Status));
-                }
-            }
+            get => _book.Status;
+            set => MyOnPropertyChanged(_book.Status, value, v => _book.Status = v);
         }
 
         public ICommand ChangeBookStatusCommand { get; private set; }
 
         private ILibManager LibManager;
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-        void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
 
         public BookViewModel(ILibManager libManager)
         {
@@ -65,18 +41,18 @@ namespace WrapperViewModel
 
         public void GetBookById(string id)
         {
-            book = LibManager.GetBookById(id);
+            _book = LibManager.GetBookById(id);
         }
 
         private void ChangeBookStatus()
         {
-            if (Status == Status.Unread)
+            if (this.Status == Status.Unread)
             {
-                Status = Status.Read;
+                this.Status = Status.Read;
             }
             else
             {
-                Status = Status.Unread;
+                this.Status = Status.Unread;
             }
         }
     }

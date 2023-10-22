@@ -2,47 +2,30 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Model;
+using MyToolkit;
 
 namespace WrapperViewModel
 {
-    public class AuthorViewModel : INotifyPropertyChanged
-	{
-		private Author _author;
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-        void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
-
-        public string Name
+    public class AuthorViewModel : ObervableObject
+    {
+	    private Author _author;
+	    
+	    public string Name
 		{
 			get => _author.Name;
-			set
-			{
-				if(_author.Name != value)
-				{
-					_author.Name = value;
-					OnPropertyChanged(nameof(Name));
-				}
-			}
+			set => MyOnPropertyChanged(_author.Name, value, v => _author.Name = v);
 		}
 
-		public ObservableCollection<Book> Books
-		{
-			get => new ObservableCollection<Book>(_author.WritedBooks);
-			set
-			{
-				if(new ObservableCollection<Book>(_author.WritedBooks) != value)
-				{
-					_author.WritedBooks = new List<Book>(value);
-					OnPropertyChanged(nameof(Books));
-				}
-			}
-		}
+        public ReadOnlyObservableCollection<Book> Books { get; set; }
+        private readonly ObservableCollection<Book> _books;
 
-		public AuthorViewModel(Author author)
-		{
-			_author = author;
-		}
+        public AuthorViewModel(Author author)
+        {
+	        _author = author;
+	        _books = new ObservableCollection<Book>(_author.WritedBooks);
+	        Books = new ReadOnlyObservableCollection<Book>(_books);
+	        OnPropertyChanged(nameof(Books));
+        }
 	}
 }
 

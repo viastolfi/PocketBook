@@ -17,7 +17,7 @@
                         <ColumnDefinition/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
-                    <ImageButton Command="{Binding NavigationManager.NavigateBackCommand}" Grid.Column="0" Source="chevron_right" Rotation="180" HorizontalOptions="Start" VerticalOptions="Center">
+                    <ImageButton Command="{Binding SpecificBookPageViewModel.NavigateBackCommand}" Grid.Column="0" Source="chevron_right" Rotation="180" HorizontalOptions="Start" VerticalOptions="Center">
                     <ImageButton.Behaviors>
                         <toolkit:IconTintColorBehavior TintColor="Red"/>
                     </ImageButton.Behaviors>
@@ -38,14 +38,14 @@
             </Grid>
 
         <ScrollView>
-            <CollectionView ItemsSource="{Binding Manager.Authors}">
+            <CollectionView ItemsSource="{Binding AuthorsViewModel.Authors}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>
                             <Label Text="{Binding Name}"/>
                             <custom_components:BookPreviewContentView Books="{Binding Books}"
-                                                             Command="{Binding NavigationManager.NavigateToPageWithBookCommand, Source={x:Reference AllBooksPageWindow}}"
-                                                             />
+                                                                      Command="{Binding SpecificBookPageViewModel.NavigateToPageWithBookCommand, Source={x:Reference AllBooksPageWindow}}"
+                                                                      />
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

@@ -6,22 +6,16 @@ using WrapperViewModel;
 
 public partial class AllBooksPage : ContentPage
 {
-	public AuthorsViewModel Manager { get; private set; }
-	public SpecificBookPageViewModel NavigationManager { get; private set; }
-
-	public AllBooksPage(AuthorsViewModel manager, SpecificBookPageViewModel navigationManager)
+	public SpecificBookPageViewModel SpecificBookPageViewModel { get; private set; }
+	public AuthorsViewModel AuthorsViewModel { get; private set; }
+	
+	public AllBooksPage(AuthorsViewModel authorsViewModel, SpecificBookPageViewModel specificBookPageViewModel)
 	{
-		Manager = manager;
-		NavigationManager = navigationManager;
+		 AuthorsViewModel = authorsViewModel;
+		 SpecificBookPageViewModel = specificBookPageViewModel;
 
 		InitializeComponent();
 
 		BindingContext = this;
 	}
-
-    protected override void OnAppearing()
-    {
-		Manager.LoadData();
-        base.OnAppearing();
-    }
 }

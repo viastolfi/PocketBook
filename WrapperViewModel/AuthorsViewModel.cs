@@ -1,43 +1,36 @@
-﻿using System;
+﻿ using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Model;
+ using MyToolkit;
 
-namespace WrapperViewModel
+ namespace WrapperViewModel
 {
-    public class AuthorsViewModel : INotifyPropertyChanged
+    public class AuthorsViewModel : ObervableObject
     {
-		private List<AuthorViewModel> _authors = new List<AuthorViewModel>();
-		public ObservableCollection<AuthorViewModel> Authors
-		{
-			get => new ObservableCollection<AuthorViewModel>(_authors);
-			set
-			{
-				if (new ObservableCollection<AuthorViewModel>(_authors) != value) return;
-				_authors = new List<AuthorViewModel>(value);
-				OnPropertyChanged(nameof(Authors));
-			}
-		}
-
+	    private readonly ObservableCollection<AuthorViewModel> _authors;
+	    public ReadOnlyObservableCollection<AuthorViewModel> Authors { get; set; }
+	    
 		private ILibManager Manager;
 
-        public void LoadData()
-		{
-            _authors.Clear();
+        public List<AuthorViewModel> LoadData()
+        {
+	        List<AuthorViewModel> authors = new List<AuthorViewModel>();
             foreach (Author a in Manager.GetAuthors())
             {
-                _authors.Add(new AuthorViewModel(a));
+                authors.Add(new AuthorViewModel(a));
             }
-        }
+
+            return authors;
+		}
 
         public AuthorsViewModel(ILibManager manager)
 		{
 			Manager = manager;
-			LoadData();
+			_authors = new ObservableCollection<AuthorViewModel>(LoadData());
+			Authors = new ReadOnlyObservableCollection<AuthorViewModel>(_authors);
+			OnPropertyChanged(nameof(Authors));
 		}
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-        void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }
 

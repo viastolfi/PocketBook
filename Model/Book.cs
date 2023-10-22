@@ -19,5 +19,7 @@ namespace Model
             Title = title;
             Status = Status.Unread;
         }
+        
+        public Book(){}
     }
 }
